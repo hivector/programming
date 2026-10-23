@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let totalData = 2;
+        let dataUsed = parseFloat(prompt("Enter the amount of data used (in GB):"));
+        let dataRemaining = totalData - dataUsed;
+        let percentageUsed = (dataUsed / totalData) * 100;
+
+
+        console.log("Data Remaining: " + dataRemaining + " GB");
+        console.log("Percentage Used: " + percentageUsed + "%");  
+
+
+        if (percentageUsed > 90) {
+            console.log("Warning: You have used " + percentageUsed + "% of your data plan. Consider upgrading or monitoring your usage.");
+        }
+
+        else if (percentageUsed > 75) {
+            console.log("Caution: You have used " + percentageUsed + "% of your data plan. Keep an eye on your usage.");
+        }
+
+        else {
+            console.log("You have used " + percentageUsed + "% of your data plan. You are within your limits.");
+        }
+
+    </script>
+</body>
+</html>

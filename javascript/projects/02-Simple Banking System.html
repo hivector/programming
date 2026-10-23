@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Simple Banking System</title>
+</head>
+<body>
+
+<script>
+
+var balance = 1000;
+
+console.log("Current Balance: ₹" + balance);
+
+
+// Deposit Section
+var depositAmount = parseFloat(
+  prompt("Enter the amount you want to deposit:")
+);
+
+if (depositAmount > 0) {
+
+  balance = balance + depositAmount;
+
+  console.log(
+    "Deposit successful! Your new balance is: ₹" + balance
+  );
+
+} else {
+
+  console.log(
+    "Invalid deposit amount. Please enter a positive number."
+  );
+
+}
+
+
+// Withdrawal Section
+var withdrawalAmount = parseFloat(
+  prompt("Enter the amount you want to withdraw:")
+);
+
+if (withdrawalAmount > balance) {
+
+  console.log(
+    "Insufficient funds. Your current balance is: ₹" + balance
+  );
+
+} else if (withdrawalAmount > 0) {
+
+  balance = balance - withdrawalAmount;
+
+  console.log(
+    "Withdrawal successful! Your new balance is: ₹" + balance
+  );
+
+} else {
+
+  console.log(
+    "Invalid withdrawal amount."
+  );
+
+}
+
+
+// Final Balance
+console.log("Your final balance is: ₹" + balance);
+
+
+// Balance Check
+var checkBalance = prompt(
+  "Do you want to check your balance? (yes/no)"
+);
+
+if (checkBalance === "yes") {
+
+  console.log(
+    "Your current balance is: ₹" + balance
+  );
+
+} else {
+
+  console.log(
+    "Thank you for using our banking system!"
+  );
+
+}
+
+</script>
+
+</body>
+</html>
